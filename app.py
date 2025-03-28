@@ -8,7 +8,7 @@ import wikipedia
 app = Flask(__name__)
 
 flag = 1
-api = 'AIzaSyC406QVbGIU4gOT7j_-Vg4ukr-4WXmdIgs'
+api = os.getenv('makersuite')
 genai.configure(api_key=api)
 
 @app.route("/",methods=["POST","GET"])
